@@ -39,17 +39,17 @@ function App() {
       {excelData ? (
         <>
           <div>
-            <div class="flex flex-col">
-              <div class="-m-1.5 overflow-x-auto">
-                <div class="p-1.5 min-w-full inline-block align-middle">
-                  <div class="overflow-hidden">
-                    <table class="min-w-full divide-y divide-gray-200 ">
+            <div className="flex flex-col">
+              <div className="-m-1.5 overflow-x-auto">
+                <div className="p-1.5 min-w-full inline-block align-middle">
+                  <div className="overflow-hidden">
+                    <table className="min-w-full divide-y divide-gray-200 ">
                       <thead>
                         <tr>
                           {Object.keys(excelData[0]).map((key, i) => (
                             <th
                               scope="col"
-                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                              className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
                               key={i}
                             >
                               {key}
@@ -58,7 +58,7 @@ function App() {
 
                           <th
                             scope="col"
-                            class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase"
+                            className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase"
                           >
                             Action
                           </th>
@@ -67,22 +67,22 @@ function App() {
                       <tbody>
                         {excelData.map((data, i) => (
                           <tr
-                            class={`odd:bg-white even:bg-gray-100 ${
+                            className={`odd:bg-white even:bg-gray-100 ${
                               i % 2 === 0 ? "bg-gray-100" : "bg-white"
                             }`}
                             key={i}
                           >
                             {Object.values(data).map((value, i) => (
                               <td
-                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 "
+                                className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 "
                                 key={i}
                               >
                                 {value}
                               </td>
                             ))}
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                               <a
-                                class="text-blue-500 hover:text-blue-700"
+                                className="text-blue-500 hover:text-blue-700"
                                 href={"#"}
                               >
                                 Delete
@@ -91,19 +91,19 @@ function App() {
                           </tr>
                         ))}
 
-                        {/* <tr class="odd:bg-white even:bg-gray-100  ">
-                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
+                        {/* <tr className="odd:bg-white even:bg-gray-100  ">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
                             John Brown
                           </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
                             45
                           </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
                             New York No. 1 Lake Park
                           </td>
-                          <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                          <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                             <a
-                              class="text-blue-500 hover:text-blue-700"
+                              className="text-blue-500 hover:text-blue-700"
                               href={"#"}
                             >
                               Delete
